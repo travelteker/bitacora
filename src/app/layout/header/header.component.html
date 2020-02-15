@@ -10,8 +10,8 @@
       aria-disabled="false"
     >
       <span class="mat-button-wrapper">
-        <img src="../../../assets/img/home/angular-white-transparent.svg" alt="logo_angular" class="docs-angular-logo">
-        <span>{{ brand }}</span>
+        <fa-icon [icon]="logoAngular" class="logoAngular"></fa-icon>
+        <span>{{ brand }} | {{ version }}</span>
       </span>
     </a>
   </div>
@@ -29,32 +29,6 @@
         <span class="main_title">{{ portfolio }}</span>
       </button>
     </a>
-    <!-- <a
-      routerLink="/estadisticas"
-      routerLinkActive="active"
-      aria-label="Estadísticas"
-      class="docs-button docs-navbar-hide-small mat-button mat-button-base"
-      tabindex="0"
-      aria-disabled="false"
-    >
-      <button mat-button>
-        <i class="material-icons">insert_chart_outlined</i>
-        <span class="main_title">{{ estadisticas }}</span>
-      </button>
-    </a> -->
-    <!-- <a
-      routerLink="/home"
-      aria-label="Home"
-      class="docs-button docs-navbar-hide-small mat-button mat-button-base profile"
-      tabindex="0"
-      aria-disabled="false"
-      (click)="onLogout()"
-      *ngIf="srvAuth.userData | async; else showLogin"
-    >
-      <button mat-button>
-        <i class="material-icons">exit_to_app</i>
-      </button>
-    </a> -->
     <a
       routerLink="/login"
       routerLinkActive="active"

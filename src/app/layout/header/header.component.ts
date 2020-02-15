@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from '../../shared/services/auth.service';
+import { faAngular, IconDefinition } from '@fortawesome/free-brands-svg-icons';
 
 const enum LinksMenu {
-  PORTFOLIO = 'Portfolio',
-  ESTADISTICAS = 'Estadísticas'
+  PORTFOLIO = 'Portfolio'
 }
 
 @Component({
@@ -13,23 +13,18 @@ const enum LinksMenu {
 })
 export class HeaderComponent implements OnInit {
 
+  readonly logoAngular: IconDefinition = faAngular;
   readonly brand: string;
   readonly portfolio: string;
-  readonly estadisticas: string;
+  readonly version: string;
 
   constructor(public srvAuth: AuthService) {
-    this.brand = 'Javier Pozo C.';
+    this.brand = 'Bitácora';
+    this.version = 'v1.0';
     this.portfolio = LinksMenu.PORTFOLIO;
-    this.estadisticas = LinksMenu.ESTADISTICAS;
    }
 
   ngOnInit() {
-  }
-
-  onLogout(): void {
-    this.srvAuth.logout();
-    sessionStorage.clear();
-    console.log('Salir session >>>>>>>>>>>>>>>>>>>>>>>> ');
   }
 
 }
