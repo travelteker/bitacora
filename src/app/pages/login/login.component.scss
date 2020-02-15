@@ -1,0 +1,36 @@
+:host {
+  display: flex;
+  justify-content: center;
+  margin: 100px 0;
+}
+
+.mat-form-field {
+  width: 100%;
+  min-width: 300px;
+}
+
+mat-card-title,
+mart-card-content {
+  display: flex;
+  justify-content: center;
+}
+
+mat-card-title {
+  font-weight: 500;
+  color: #f27b46;
+  font-size: 1.6em;
+}
+
+#btnLogin {
+  width: 100%;
+  background: #f27b46;
+  color: white;
+}
+
+#btnLogin:hover {
+  color: black;
+  border: 2px solid #f27b46;
+  background: white;
+}
+
+

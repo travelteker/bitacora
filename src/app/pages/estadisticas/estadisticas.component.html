@@ -1,0 +1,49 @@
+<mat-toolbar color="primary" class="navbar mat-elevation-z6">
+  <span color="primary" (click)="opened = !opened">
+    <mat-icon class="hamburger">menu</mat-icon>
+  </span>
+  <span class="fill-remaining-space"></span>
+  <a
+      routerLink="/home"
+      aria-label="Home"
+      class="docs-button docs-navbar-hide-small mat-button mat-button-base profile"
+      tabindex="0"
+      aria-disabled="false"
+      (click)="onLogout()"
+    >
+    <button mat-button>
+      <i class="material-icons">exit_to_app</i>
+    </button>
+  </a>
+
+</mat-toolbar>
+<mat-sidenav-container>
+  <mat-sidenav #sideNav [(opened)]="opened" mode="side">
+    <span class="fecha">
+      -- fecha --
+    </span>
+    <mat-divider></mat-divider>
+    <mat-nav-list>
+      <a mat-list-item routerLink="presenter">
+        <mat-icon class="flag">desktop_windows</mat-icon> Presentación
+      </a>
+    </mat-nav-list>
+    <mat-divider></mat-divider>
+    <mat-nav-list>
+      <a mat-list-item routerLink="familias">
+        <mat-icon class="flag">book</mat-icon> Familias
+      </a>
+    </mat-nav-list>
+    <mat-divider></mat-divider>
+    <mat-nav-list>
+      <a mat-list-item routerLink="perfil">
+        <mat-icon class="flag">account_circle</mat-icon> Perfil
+      </a>
+    </mat-nav-list>
+    <mat-divider></mat-divider>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>
+

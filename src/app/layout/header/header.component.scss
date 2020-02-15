@@ -1,0 +1,67 @@
+.navbar.custom_brand {
+  justify-content: space-between;
+}
+
+span {
+  padding-right: 1rem;
+}
+
+.custom_brand {
+  background: #f46b45;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to left, #eea849, #f46b45);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to left, #eea849, #f46b45); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  color: #fff;
+}
+
+.custom_brand > div > a {
+  cursor: pointer;
+}
+
+.docs-angular-logo {
+  height: 37px;
+  margin: 0 4px 3px 0;
+  vertical-align: middle;
+}
+
+.item-button {
+  height:25px;
+  margin: 0 5px 3px 0;
+  vertical-align: middle;
+}
+
+#brand {
+  font-size: 1.2rem;
+  text-decoration: none;
+}
+
+.main_title {
+  font-size: 1.2rem;
+}
+
+.right-menu-items > a {
+  text-decoration: none;
+}
+
+.active {
+  color: #000;
+}
+
+.right-menu-items .mat-button {
+  padding: 0 1px;
+}
+
+.mat-button i {
+  margin: -3px 2px 0 0;
+}
+
+a.profile > button i.material-icons {
+  font-size: 2.2em;
+}
+
+a.profile:hover {
+  background: #b97644;
+}
+
+a.profile:hover > button i.material-icons {
+  font-size: 2.5em;
+}

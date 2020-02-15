@@ -1,0 +1,46 @@
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  mat-icon {
+    cursor: pointer;
+  }
+}
+
+.hamburger {
+  font-size: 29px;
+  margin-top: 8px;
+}
+
+mat-sidenav {
+  width: 200px;
+  cursor: pointer;
+  background: #451e89;
+  position: fixed;
+  top: 55px;
+  z-index: 1000;
+}
+
+.mat-list-base {
+  padding: 0;
+}
+
+.fecha {
+  display: inline-block;
+  height: 80px;
+  width: 100%;
+  margin-top: 5px;
+  text-align: center;
+  justify-content: center;
+  padding-top: 10px;
+}
+
+.mat-list-base .mat-list-item, a {
+  color: #fff;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.flag {
+  margin-right: 5px;
+}
