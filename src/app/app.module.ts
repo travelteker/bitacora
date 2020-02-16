@@ -14,11 +14,13 @@ import { environment } from '../environments/environment';
 /* login */
 import { AngularFireAuthModule } from '@angular/fire/auth';
 import { Page404Component } from './pages/page404/page404.component';
+import { CookiesPolicyComponent } from './pages/cookies-policy/cookies-policy.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    Page404Component
+    Page404Component,
+    CookiesPolicyComponent
   ],
   imports: [
     BrowserModule,

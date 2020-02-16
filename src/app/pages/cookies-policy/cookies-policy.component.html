@@ -1,0 +1,28 @@
+<div class="container">
+  <div class="cookies-policy mat-elevation-z6">
+    <mat-card>
+      <div class="headerCookiesPolicy">
+        <mat-card-title-group>
+          <mat-card-title>Política de Cookies</mat-card-title>
+          <mat-card-subtitle>Consentimiento</mat-card-subtitle>
+        </mat-card-title-group>
+        <mat-icon class="clear" (click)="closePolicyCookies()">clear</mat-icon>
+      </div>
+      <div class="imgContentCard">
+        <img matCardImage src="assets/img/cookies.png">
+      </div>
+      <mat-card-content>
+        <p class="explain">Este sitio web o sus herramientas de terceros procesan datos personales (por ejemplo, datos de navegación o direcciones IP) y usan cookies u otros identificadores,
+        que son necesarios para su funcionamiento y lograr los fines ilustrados en la política de cookies.</p>
+        <p class="explain">Usted acepta el uso de cookies u otros identificadores al cerrar o rechazar este aviso, al aceptarlo, al hacer clic en un enlace o botón o al continuar navegando.</p>
+      </mat-card-content>
+      <mat-card-actions class="actions">
+        <button class="actionCookiesPolicy" mat-button color="warn" (click)="showPolicyCookies()">Política</button>
+        <button class="actionCookiesPolicy" mat-button color="primary" (click)="initSite()">Aceptar</button>
+      </mat-card-actions>
+      <mat-card-footer>
+        <!-- Footer -->
+      </mat-card-footer>
+    </mat-card>
+  </div>
+</div>
