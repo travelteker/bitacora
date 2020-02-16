@@ -225,10 +225,24 @@ Para ello ejecutaremos el siguiente comando:
 
 Con este comando se añade la ruta en nuestro fichero de routing principal **layout-routing.module.ts** creando el registro **lazy-loading** para la ruta especificada.
 
-# Cookie Banner
 
-[cookie-consent](https://github.com/tinesoft/ngx-cookieconsent)
+# Añadir Bootsrap v4.x
 
-# Métricas con Google Analitycs
+Ejecutar el siguiente comando:  
 
+> npm install --save bootstrap jquery popper.js  
 
+Añadir las dependencias en nuestro fichero angular.json:  
+
+```json
+"styles": [
+  "./node_modules/bootstrap/dist/css/bootstrap.min.css",
+  "./node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css",
+  "src/styles.scss"
+],
+"scripts": [
+  "./node_modules/jquery/dist/jquery.min.js",
+  "./node_modules/popper.js/dist/umd/popper.min.js",
+  "./node_modules/bootstrap/dist/js/bootstrap.min.js"
+]
+```
