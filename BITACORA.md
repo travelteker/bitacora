@@ -225,3 +225,10 @@ Para ello ejecutaremos el siguiente comando:
 
 Con este comando se añade la ruta en nuestro fichero de routing principal **layout-routing.module.ts** creando el registro **lazy-loading** para la ruta especificada.
 
+# Cookie Banner
+
+[cookie-consent](https://github.com/tinesoft/ngx-cookieconsent)
+
+# Métricas con Google Analitycs
+
+

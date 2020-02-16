@@ -34,7 +34,7 @@ export class LoginComponent implements OnInit {
         (res) => {
           console.log('Login successfully >>>>>> ', res);
           sessionStorage.setItem('uid', res.user.uid);
-          this.route.navigate(['/']);
+          this.route.navigate(['/estadisticas']);
         }
       )
       .catch(
