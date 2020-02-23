@@ -21,15 +21,48 @@ mat-card-title {
   font-size: 1.6em;
 }
 
+.login-form-title {
+  display: block;
+  font-family: Poppins-Bold;
+  font-size: 39px;
+  color: #ca1c02;
+  line-height: 1.2;
+  text-align: center;
+  margin-bottom: 35px;
+}
+
+.login-form-avatar {
+  display: block;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 0 auto;
+  padding-bottom: 40px;
+}
+
+.login-form-avatar img {
+  width: 122px;
+  height: 135px;
+}
+
+mat-card-content form {
+  margin-top: 3rem;
+}
+
+mat-card-content form > button {
+  margin-top: 3rem;
+}
+
 #btnLogin {
   width: 100%;
-  background: #f27b46;
+  background: #ca1c02;
   color: white;
 }
 
 #btnLogin:hover {
   color: black;
-  border: 2px solid #f27b46;
+  border: 2px solid #ca1c02;
   background: white;
 }
 
