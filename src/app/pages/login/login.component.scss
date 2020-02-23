@@ -56,14 +56,30 @@ mat-card-content form > button {
 
 #btnLogin {
   width: 100%;
-  background: #ca1c02;
+  background: #240b36;
   color: white;
 }
 
 #btnLogin:hover {
-  color: black;
-  border: 2px solid #ca1c02;
-  background: white;
+  background: #c31432;
 }
+
+/* EFECTO FONDO */
+.container-login {
+  position: absolute;
+  background: #c31432;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to bottom, #240b36, #c31432);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to bottom, #240b36, #c31432); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  width: 100%;
+  height: 100vh;
+  margin: 0;
+  top: 0;
+  z-index: 5000;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+}
+
+/* FIN EFECTO FONDO */
 
 

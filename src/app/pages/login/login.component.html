@@ -1,24 +1,26 @@
-<mat-card class="cardLogin">
-  <mat-card-title>
-    <span class="login-form-title p-b-70">Bienvenido</span>
-  </mat-card-title>
-  <mat-card-content>
-    <span class="login-form-avatar mat-elevation-z6">
-      <img src="assets/img/profile.jpg" alt="AVATAR">
-    </span>
-    <form [formGroup]="loginForm" (ngSubmit)="onLogin(loginForm.value)">
-      <p>
-        <mat-form-field>
-          <input formControlName="email" type="text" matInput placeholder="Username"/>
-        </mat-form-field>
-      </p>
-      <p>
-        <mat-form-field>
-          <input formControlName="password" type="password" matInput placeholder="Password"/>
-        </mat-form-field>
-      </p>
-      <button id="btnLogin" type="submit" mat-raised-button>Enter</button>
-    </form>
-  </mat-card-content>
-</mat-card>
+<div class="container-login">
+  <mat-card class="cardLogin">
+    <mat-card-title>
+      <span class="login-form-title p-b-70">Bienvenido</span>
+    </mat-card-title>
+    <mat-card-content>
+      <span class="login-form-avatar mat-elevation-z6">
+        <img src="assets/img/profile.jpg" alt="AVATAR">
+      </span>
+      <form [formGroup]="loginForm" (ngSubmit)="onLogin(loginForm.value)">
+        <p>
+          <mat-form-field>
+            <input formControlName="email" type="text" matInput placeholder="Username"/>
+          </mat-form-field>
+        </p>
+        <p>
+          <mat-form-field>
+            <input formControlName="password" type="password" matInput placeholder="Password"/>
+          </mat-form-field>
+        </p>
+        <button id="btnLogin" type="submit" mat-raised-button>Enter</button>
+      </form>
+    </mat-card-content>
+  </mat-card>
+</div>
 
