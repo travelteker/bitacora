@@ -35,19 +35,24 @@ export class CookiesPolicyComponent implements OnInit {
 
   public closePolicyCookies(): void {
     // this.externalRedirection();
-    this.ckPolicySrv.updatedStatusControlPolicyCookies(false);
     this.updateSessionStorage(this.keySessionPolicyCookies);
+    // Ocultar ventana política cookies
+    this.ckPolicySrv.updatedStatusControlPolicyCookies(false);
   }
 
   /**
-   * Actualizar key de sessionStorage
+   * Actualizar key de sessionStorage ------------------> llevar lógica al servicio
    */
-  private updateSessionStorage(key: string): void {
-    const beforeUpdateKeySession = JSON.parse(sessionStorage.getItem(key));
-    const newKeyToAddSession = {result: {accept: 'no'}};
+  private updateSessionStorage(key: string, newValue?: any): void {
+    let beforeUpdateKeySession: any;
+    let newKeyToAddSession: any;
+    const sessionKey = sessionStorage.getItem(key);
 
-    // Ocultar banner Cookies Policy
-    sessionStorage.setItem(this.keySessionPolicyCookies, JSON.stringify({...beforeUpdateKeySession, ...newKeyToAddSession}));
+    if (sessionKey) {
+      beforeUpdateKeySession = JSON.parse(sessionStorage.getItem(key));
+      newKeyToAddSession = {result: {accept: 'no', time: Date.now()}};
+      sessionStorage.setItem(this.keySessionPolicyCookies, JSON.stringify({...beforeUpdateKeySession, ...newKeyToAddSession}));
+    }
   }
 
   /**
@@ -58,17 +63,11 @@ export class CookiesPolicyComponent implements OnInit {
   }
 
   /**
-   * Hide banner Policy Cookies and access allow to the site Bitacora
-   */
-  private hideBannerPolicyCookies(): void {
-    this.ckPolicySrv.updatedStatusControlPolicyCookies(false);
-  }
-
-  /**
    * Mostrar componente con la Política de Cookies
    */
   public showPolicyCookies(): void {
     alert('En construcción .... próximamente disponible!!');
+    // TODO ---> CREAR COMPONENTE PARA MOSTRAR CONTENIDO POLITICA DE COOKIES
   }
 
   /**
@@ -76,7 +75,18 @@ export class CookiesPolicyComponent implements OnInit {
    */
   public initSite(): void {
     this.hideBannerPolicyCookies();
-    this.router.navigate([URL_BITACORA.HOME]);
+    // Guardar variable session Acepta Cookies
+    sessionStorage.setItem('cookies', JSON.stringify({accept: true, time: Date.now()}));
   }
+
+  /**
+   * Hide banner Policy Cookies and access allow to the site Bitacora
+   */
+  private hideBannerPolicyCookies(): void {
+    this.ckPolicySrv.updatedStatusControlPolicyCookies(false);
+  }
+
+  // TODO ---> crear servicio para comprobar si se mostró en la SESSION el aviso de COOKIES,
+  // SINO fue así seguir mostrando en cada navegación
 
 }

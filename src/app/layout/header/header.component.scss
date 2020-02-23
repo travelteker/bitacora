@@ -7,9 +7,9 @@ span {
 }
 
 .custom_brand {
-  background: #f46b45;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to left, #eea849, #f46b45);  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to left, #eea849, #f46b45); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: #e52d27; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #e52d27, #b31217); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #e52d27, #b31217); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   color: #fff;
 }
 
@@ -47,14 +47,10 @@ span {
   margin: -3px 2px 0 0;
 }
 
-a.profile > button i.material-icons {
-  font-size: 2.2em;
+a.login > button i.material-icons {
+  font-size: 3.0em;
 }
 
-a.profile:hover {
-  background: #b97644;
-}
-
-a.profile:hover > button i.material-icons {
+a.login:hover > button i.material-icons {
   font-size: 2.5em;
 }

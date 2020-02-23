@@ -2,8 +2,30 @@ footer {
   bottom: 0;
   position: absolute;
   width: 100%;
-  background: #f46b45;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to left, #eea849, #f46b45);  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to left, #eea849, #f46b45); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: #e52d27; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #e52d27, #b31217); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #e52d27, #b31217); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   color: #fff;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+}
+.social-icons a {
+  display: inline-block;
+  height: 2.5rem;
+  width: 2.5rem;
+  background-color: #fff;
+  color: #ac4225;
+  border-radius: 10%;
+  text-align: center;
+  font-size: 28px;
+  margin-right: 1rem;
+  transition: transform 1s;
+}
+
+.social-icons a:hover {
+  color: #000;
+  transform: scale(1.3);
 }

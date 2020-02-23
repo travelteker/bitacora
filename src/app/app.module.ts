@@ -16,6 +16,8 @@ import { AngularFireAuthModule } from '@angular/fire/auth';
 import { Page404Component } from './pages/page404/page404.component';
 import { CookiesPolicyComponent } from './pages/cookies-policy/cookies-policy.component';
 
+import { LocationStrategy, HashLocationStrategy} from '@angular/common';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -36,6 +38,10 @@ import { CookiesPolicyComponent } from './pages/cookies-policy/cookies-policy.co
       provide: StorageBucket,
       useValue: `gs://${environment.firebaseConfig.storageBucket}`
     },
+    {
+      provide: LocationStrategy,
+      useClass: HashLocationStrategy
+    }
   ],
   bootstrap: [AppComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]

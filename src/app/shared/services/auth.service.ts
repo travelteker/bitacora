@@ -10,10 +10,10 @@ import { IUser } from '../models/user.interface';
 })
 export class AuthService {
 
-  public userData: Observable<firebase.User>;
+  public userData$: Observable<firebase.User>;
 
   constructor(private afAuth: AngularFireAuth) {
-    this.userData = afAuth.authState;
+    this.userData$ = afAuth.authState;
   }
 
   /**

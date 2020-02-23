@@ -246,3 +246,56 @@ Añadir las dependencias en nuestro fichero angular.json:
   "./node_modules/bootstrap/dist/js/bootstrap.min.js"
 ]
 ```
+
+Valorar la opción de usar el paquete **ngx-bootstrap**  
+**[ngx-bootstrap](https://valor-software.com/ngx-bootstrap/#/)**
+
+# Deploy en Firebase
+
+En nuestra cuenta de Firebase, ir a la sección **Hosting** y hacer click en el botón 'Empezar'.  
+
+Seguir los pasos **Configurar Firebase Hosting**  
+- Instalar CLI de Firebase  
+  > npm install -g firebase-tools  
+- Abrir consola y situarnos en el directorio root del proyecto.  
+  Iniciar sesión en Google:  
+  > firebase login  
+  
+  Iniciar proyecto:  
+  > firebase init  
+- Subir proyecto:  
+  > firebase deploy  
+
+## Routing 404 Angular
+
+> Para que funcione el routing de angular sobre el del servidor web de Firebase añadir el siguiente provider en el módulo **app.module.ts**  
+
+```javascript
+
+...
+import { LocationStrategy, HashLocationStrategy} from '@angular/common';
+...
+
+
+@NgModule({
+  declarations: [
+   ...
+  ],
+  imports: [
+   ...
+  ],
+ providers: [
+    ...
+    {
+      provide: LocationStrategy,
+      useClass: HashLocationStrategy
+    }
+    ...
+  ],
+  bootstrap: [AppComponent],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA]
+})
+export class AppModule { }
+```
+
+
